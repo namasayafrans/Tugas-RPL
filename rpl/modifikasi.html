@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD Barang</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar Barang</h2>
+        <button id="addBtn">Tambah Barang</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Barang A</td>
+                    <td>100</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Hapus</button>
+                    </td>
+                </tr>
+                <!-- Data barang statis akan ditampilkan di sini -->
+            </tbody>
+        </table>
+    </div>
+
+    <form id="barangForm" class="modal">
+        <label for="nama">Nama Barang:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="harga">Harga:</label>
+        <input type="number" id="harga" name="harga" required>
+
+        <button type="submit">Simpan</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

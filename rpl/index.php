@@ -1,0 +1,134 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('location:login.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Template Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        } */
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- <header>
+    <h1>Contoh Template Menu</h1>
+</header> -->
+
+<nav>
+    <div class="dropdown">
+        <button class="dropbtn">Menu
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Tentang Kami</a>
+            <a href="modifikasi.html">Modifikasi barang</a>
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
+    <a href="#">Beranda</a>
+</nav>
+
+<div class="content">
+    <h2>Selamat datang di Website Kami!</h2>
+    <p>Ini adalah contoh template menu dengan submenu. Silakan sesuaikan dengan kebutuhan Anda.</p>
+</div>
+
+<footer>
+    <p>&copy; 2023 Nama Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
